@@ -3136,7 +3136,7 @@ public abstract class SSLEngineTest {
     public void testSessionCacheSize() throws Exception {
         clientSslCtx = wrapContext(SslContextBuilder.forClient()
                 .trustManager(InsecureTrustManagerFactory.INSTANCE)
-                .sslProvider(SslProvider.JDK)
+                .sslProvider(sslClientProvider())
                 .sslContextProvider(clientSslContextProvider())
                 .protocols(protocols())
                 .ciphers(ciphers())
